@@ -22,5 +22,10 @@ public class Point3 {
 
     public Point3() {
     }
-  
+    
+    public Point3(Point3 r) {
+        this.x = r.x;
+        this.y = r.y;
+        this.w = r.w;
+    }
 }

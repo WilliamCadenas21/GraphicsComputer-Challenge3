@@ -25,5 +25,12 @@ public class Point4 {
     public Point4() {
     }
     
+    public Point4(Point4 r) {
+        this.x = r.x;
+        this.y = r.y;
+        this.z = r.z;
+        this.w = r.w;
+    }
+    
     
 }

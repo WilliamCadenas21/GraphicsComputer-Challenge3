@@ -23,6 +23,12 @@ public class Vector4 {
 
     public Vector4() {
     }
+    
+    public Vector4(Vector4 r) {
+        this.x = r.x;
+        this.y = r.y;
+        this.z = r.z;
+    }
 
     public static Vector4 crossProduct(Vector4 u, Vector4 v) {
         Vector4 r = new Vector4();
@@ -40,15 +46,16 @@ public class Vector4 {
 
     public double magnitud() {
         double r;
-        r = Math.sqrt(Math.pow(x,2)+Math.pow(y,2)+Math.pow(z,2));
+        r = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2) + Math.pow(z, 2));
         return r;
     }
 
     public void normalize() {
         double m = magnitud();
-        x = x/m;
-        y = y/m;
-        z = z/m;
+        x = x / m;
+        y = y / m;
+        z = z / m;
     }
+
 
 }

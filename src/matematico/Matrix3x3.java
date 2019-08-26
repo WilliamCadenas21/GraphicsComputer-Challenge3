@@ -20,6 +20,10 @@ public class Matrix3x3 {
     public Matrix3x3(double[][] matrix) {
         this.matrix = matrix;
     }
+    
+    public Matrix3x3(Matrix3x3 m) {
+        this.matrix = m.matrix;
+    }
 
     /**
      * multiply a matrix 3x3 with a vector3
@@ -34,25 +38,25 @@ public class Matrix3x3 {
             sum = 0;
             for (int j = 0; j < 3; j++) {
                 switch (j) {
-                    case 1:
+                    case 0:
                         sum = sum + m.matrix[i][j] * p.x;
                         break;
-                    case 2:
+                    case 1:
                         sum = sum + m.matrix[i][j] * p.y;
                         break;
-                    case 3:
+                    case 2:
                         sum = sum + m.matrix[i][j] * p.w;
                         break;
                 }
             }
             switch (i) {
-                case 1:
+                case 0:
                     r.x = sum;
                     break;
-                case 2:
+                case 1:
                     r.y = sum;
                     break;
-                case 3:
+                case 2:
                     r.w = sum;
                     break;
             }
