@@ -57,6 +57,11 @@ public class PaqueteMatematico {
         System.out.println("despues de la operacion matrix4x4 por Matrix4x4:");
         Matrix4x4 r4 = new Matrix4x4(Matrix4x4.times(m4,m4));
         writeMatrix(r4);
+        
+        //ecuaciones
+        EcParSegReg e1 = new EcParSegReg(1,1,2,1);
+        EcParSegReg e2 = new EcParSegReg(2,1.5,2,0.5);
+        double[] vec = EcParSegReg.solve(e1,e2);
     }
     
     static void writePoint(Point3 p){
